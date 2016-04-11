@@ -19,11 +19,13 @@
         android:src="@drawable/ic_add_shopping_cart_white_48dp" />
 
     <TextView
+        android:id="@+id/navHeaderText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:text="Xpense Tracker"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textIsSelectable="false" />
 
     <!--<TextView
         android:id="@+id/textView"
