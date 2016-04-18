@@ -1,5 +1,6 @@
 package com.bitbytetech.xpensetracker;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -24,12 +25,9 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        FontsOverride.setDefaultFont(this, "MONOSPACE", "roboto-fonts/Roboto-Black.ttf");
+        //FontsOverride.setDefaultFont(this, "MONOSPACE", "roboto-fonts/Roboto-Black.ttf");
 
         setContentView(R.layout.activity_main);
-
-        //use this.getAssets if you are calling from an Activity
-        //Typeface roboto = Typeface.createFromAsset(this.getAssets(), "font/NotoSans-Bold.ttf");
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -38,8 +36,11 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();*/
+                Intent intentIncomeExpense = new Intent();
+                intentIncomeExpense.setClass(MainActivity.this, AddIncomeExpenseActivity.class);
+                startActivity(intentIncomeExpense);
             }
         });
 
@@ -51,9 +52,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        /*TextView navHeaderText = (TextView) findViewById(R.id.navHeaderText);
-        navHeaderText.setTypeface(roboto);*/
 
     }
 
