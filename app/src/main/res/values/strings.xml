@@ -6,4 +6,7 @@
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_add_income_expense">Income / Expense</string>
+
+    <string name="toggle_income">Income</string>
+    <string name="toggle_expense">Expense</string>
 </resources>
